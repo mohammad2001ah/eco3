@@ -15,7 +15,7 @@ export default function Navbar() {
     setOpenMenu(false);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: '#000'}}>
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={handleMenuClick}>
           <MenuIcon />
@@ -26,14 +26,9 @@ export default function Navbar() {
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Button color="inherit">Home</Button>
           <Button color="inherit">Link</Button>
-          <Button
-            color="inherit"
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleMenuClick}
-          >
-            Dropdown
-          </Button>
+          <Button color="inherit">About Us</Button>
+          <Button color="inherit">Contact Us</Button>
+          
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}
