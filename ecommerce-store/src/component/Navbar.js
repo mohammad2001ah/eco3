@@ -6,17 +6,14 @@ import SearchIcon from '@mui/icons-material/Search';
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openMenu, setOpenMenu] = React.useState(false);
-
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
     setOpenMenu(true);
   };
-
   const handleMenuClose = () => {
     setAnchorEl(null);
     setOpenMenu(false);
   };
-
   return (
     <AppBar position="static">
       <Toolbar>
@@ -26,7 +23,6 @@ export default function Navbar() {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Store
         </Typography>
-
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Button color="inherit">Home</Button>
           <Button color="inherit">Link</Button>
@@ -51,9 +47,7 @@ export default function Navbar() {
             <MenuItem onClick={handleMenuClose}>Another action</MenuItem>
             <MenuItem onClick={handleMenuClose}>Something else here</MenuItem>
           </Menu>
-          <Button color="inherit" disabled>Disabled</Button>
         </Box>
-
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <InputBase
