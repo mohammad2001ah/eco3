@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, InputBase } from '@mui/material';
 import MenuIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
-
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openMenu, setOpenMenu] = React.useState(false);
