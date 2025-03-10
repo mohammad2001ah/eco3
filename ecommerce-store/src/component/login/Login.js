@@ -10,7 +10,7 @@ export default function Login() {
               <form id="loginForm">
                 <div className="mb-md-5 mt-md-4">
                   <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
-                  <p className="text-white-50 mb-1">Please enter your login and password!</p>
+                  <p className="text-white-50 mb-1">Please enter your Email and password!</p>
                   <div data-mdb-input-init className="form form-white mb-4 mx-5">
                     <label className="form-label" htmlFor="typeEmailX">Email</label>
                     <input
