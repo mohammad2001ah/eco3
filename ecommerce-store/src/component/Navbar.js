@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, InputBase } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function Navbar() {
@@ -28,20 +28,6 @@ export default function Navbar() {
           <Button color="inherit">Link</Button>
           <Button color="inherit">About Us</Button>
           <Button color="inherit">Contact Us</Button>
-          
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            open={openMenu}
-            onClose={handleMenuClose}
-            MenuListProps={{
-              'aria-labelledby': 'simple-menu',
-            }}
-          >
-            <MenuItem onClick={handleMenuClose}>Action</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Another action</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Something else here</MenuItem>
-          </Menu>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
