@@ -24,7 +24,9 @@ export default function Navbar() {
           Black Store
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <Button color="inherit">Home</Button>
+          <Link to='/'>
+            <Button color="inherit">Home</Button>
+          </Link>
           <Button color="inherit">Link</Button>
           <Button color="inherit">About Us</Button>
           <Button color="inherit">Contact Us</Button>
