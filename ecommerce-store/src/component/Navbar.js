@@ -15,7 +15,7 @@ export default function Navbar() {
     setOpenMenu(false);
   };
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#000'}}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#000',marginBottom:5}}>
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={handleMenuClick}>
           <MenuIcon />
@@ -25,7 +25,7 @@ export default function Navbar() {
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Link to='/'>
-            <Button color="inherit">Home</Button>
+            <Button color="inherit" sx={{color:'white'}}>Home</Button>
           </Link>
           <Button color="inherit">Link</Button>
           <Button color="inherit">About Us</Button>
@@ -44,5 +44,6 @@ export default function Navbar() {
         </Box>
       </Toolbar>
     </AppBar>
+    
   );
 }
