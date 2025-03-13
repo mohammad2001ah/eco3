@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import WatchIcon from '@mui/icons-material/Watch';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
@@ -6,12 +7,13 @@ import CheckroomIcon from '@mui/icons-material/Checkroom';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 
 export default function Product() {
+  const navigate = useNavigate();
   const products = [
-    { id: 1, name: "Watch", icon: <WatchIcon  sx={{ color: "#ffffff" }} /> },
-    { id: 2, name: "Laptop", icon: <LaptopIcon sx={{ color: "#ffffff" }} /> },
-    { id: 3, name: "Phone", icon: <SmartphoneIcon sx={{ color: "#ffffff" }} /> },
-    { id: 4, name: "Clothes", icon: <CheckroomIcon sx={{ color: "#ffffff" }} /> },
-    { id: 5, name: "Electricals", icon: <ElectricalServicesIcon sx={{ color: "#ffffff" }} /> },
+    { id: 1, name: "Watch", icon: <WatchIcon  sx={{ color: "#ffffff" }} />, path:"/Watch" },
+    { id: 2, name: "Laptop", icon: <LaptopIcon sx={{ color: "#ffffff" }} /> ,path:"/Laptop"},
+    { id: 3, name: "Smart Phone", icon: <SmartphoneIcon sx={{ color: "#ffffff" }} /> ,path:"/Smart"},
+    { id: 4, name: "Clothes", icon: <CheckroomIcon sx={{ color: "#ffffff" }} /> ,path:"/Clothes" },
+    { id: 5, name: "Electricals", icon: <ElectricalServicesIcon sx={{ color: "#ffffff" }} />,path:"/Electricals" },
   ];
 
   return (
@@ -68,6 +70,7 @@ export default function Product() {
                 borderColor: "#ffffff",
               },
             }}
+            onClick={() => product.path && navigate(product.path)}
           >
             {product.icon}
             <Typography
