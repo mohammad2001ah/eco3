@@ -25,9 +25,11 @@ export default function Navbar() {
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Link to='/'>
-            <Button color="inherit" sx={{color:'white'}}>Home</Button>
+          <Button color="inherit" sx={{color:'white'}}>Home</Button>
           </Link>
-          <Button color="inherit">Link</Button>
+          <Link to='/Product'>
+          <Button color="inherit" sx={{color:'white'}}>Product</Button>
+          </Link>
           <Button color="inherit">About Us</Button>
           <Button color="inherit">Contact Us</Button>
         </Box>
