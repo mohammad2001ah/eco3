@@ -34,7 +34,7 @@ export default function Navbar() {
             <Button color="inherit"sx={{color:'white'}}>About Us</Button>
           </Link>
           <Link to="/ContactUs">
-            <Button color="inherit">Contact Us</Button>
+            <Button color="inherit" sx={{color:'white'}}>Contact Us</Button>
           </Link>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
