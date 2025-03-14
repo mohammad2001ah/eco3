@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const SignUp = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -8,15 +9,18 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("user", JSON.stringify(formData)); 
-    setFormData({ firstName: "", lastName: "", email: "", password: "" }); 
-    navigate("/login"); 
+    localStorage.setItem("user", JSON.stringify(formData));
+    setFormData({ firstName: "", lastName: "", email: "", password: "" });
+    navigate("/login");
   };
+
   return (
     <section>
       <div
@@ -40,64 +44,36 @@ const SignUp = () => {
               </a>
             </div>
             <div className="col-lg-6 mb-5 mb-lg-0">
-              <div className="card">
-                <div className="card-body py-5 px-md-5">
+              <div className="card shadow-lg rounded">
+                <div className="card-body p-5">
                   <form onSubmit={handleSubmit}>
-                    <div className="row">
-                      <div className="col-md-6 mb-4 mx-1">
-                        <div className="form-group">
-                          <label htmlFor="firstName">First name</label>
-                          <input
-                            type="text"
-                            id="firstName"
-                            name="firstName"
-                            className="form-control"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label htmlFor="lastName">Last name</label>
-                          <input
-                            type="text"
-                            id="lastName"
-                            name="lastName"
-                            className="form-control"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
                     <div className="form-group mb-4">
-                      <label htmlFor="email">Email address</label>
+                      <label htmlFor="email" className="form-label">Email address</label>
                       <input
                         type="email"
-                        id="emailSign"
+                        id="email"
                         name="email"
-                        className="form-control"
+                        className="form-control form-control-lg"
+                        placeholder="Enter your email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
+                        style={{ fontSize: '1.1rem' }} // زيادة حجم الخط للحقول
                       />
                     </div>
                     <div className="form-group mb-4">
-                      <label htmlFor="password">Password</label>
+                      <label htmlFor="password" className="form-label">Password</label>
                       <input
                         type="password"
-                        id="passwordSign"
+                        id="password"
                         name="password"
-                        className="form-control"
+                        className="form-control form-control-lg"
+                        placeholder="Enter your password"
                         value={formData.password}
                         onChange={handleChange}
-                        required
+                        style={{ fontSize: '1.1rem' }} // زيادة حجم الخط للحقول
                       />
                     </div>
-                    <button type="submit" onClick={()=>navigate("/Login")} className="btn btn-dark btn-block mb-4">
+                    <button type="submit" className="btn btn-dark btn-lg w-100 mt-4">
                       Sign Up
                     </button>
                   </form>
@@ -110,4 +86,5 @@ const SignUp = () => {
     </section>
   );
 };
+
 export default SignUp;
