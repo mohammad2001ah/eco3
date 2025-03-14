@@ -30,8 +30,12 @@ export default function Navbar() {
           <Link to='/Product'>
           <Button color="inherit" sx={{color:'white'}}>Product</Button>
           </Link>
-          <Button color="inherit">About Us</Button>
-          <Button color="inherit">Contact Us</Button>
+          <Link to="/AboutUs">
+            <Button color="inherit"sx={{color:'white'}}>About Us</Button>
+          </Link>
+          <Link to="/ContactUs">
+            <Button color="inherit">Contact Us</Button>
+          </Link>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>

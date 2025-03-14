@@ -9,6 +9,8 @@ import Laptop from "./component/Products/Laptop";
 import Electricals from "./component/Products/Electricals";
 import Clothes from "./component/Products/Clothes";
 import Watch from "./component/Products/Watch";
+import AboutUs from "./component/AboutUs";
+import ContactUs from "./component/ContactUs";
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +25,8 @@ function App() {
         <Route path="/electricals" element={<Electricals />} />
         <Route path="/clothes" element={<Clothes />} />
         <Route path="/watch" element={<Watch />} />
+        <Route path="/AboutUs" element={<AboutUs/>}/>
+        <Route path="/ContactUs" element={<ContactUs/>}/>
       </Routes>
     </BrowserRouter>
   );
