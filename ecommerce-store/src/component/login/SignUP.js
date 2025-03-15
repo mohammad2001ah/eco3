@@ -57,7 +57,7 @@ const SignUp = () => {
                         placeholder="Enter your email"
                         value={formData.email}
                         onChange={handleChange}
-                        style={{ fontSize: '1.1rem' }} // زيادة حجم الخط للحقول
+                        style={{ fontSize: '1.1rem' }}
                       />
                     </div>
                     <div className="form-group mb-4">
@@ -70,7 +70,7 @@ const SignUp = () => {
                         placeholder="Enter your password"
                         value={formData.password}
                         onChange={handleChange}
-                        style={{ fontSize: '1.1rem' }} // زيادة حجم الخط للحقول
+                        style={{ fontSize: '1.1rem' }} 
                       />
                     </div>
                     <button type="submit" className="btn btn-dark btn-lg w-100 mt-4">
