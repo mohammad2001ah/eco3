@@ -30,9 +30,9 @@ export default function Navbar() {
           <Link to='/Product'>
           <Button color="inherit" sx={{color:'white'}}>Product</Button>
           </Link>
-          <Link to="/AboutUs">
+          {/* <Link to="/AboutUs">
             <Button color="inherit"sx={{color:'white'}}>About Us</Button>
-          </Link>
+          </Link> */}
           <Link to="/ContactUs">
             <Button color="inherit" sx={{color:'white'}}>Contact Us</Button>
           </Link>
