@@ -11,6 +11,7 @@ export default function Home() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           color: "white",
+          marginTop:"-80px"
         }}>
         <div className="row d-flex align-items-center w-75">
         <div className="col-md-6 d-flex justify-content-center">

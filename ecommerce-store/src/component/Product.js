@@ -22,6 +22,7 @@ export default function Product() {
         background: "linear-gradient(to bottom, #1a1a1a, #333333)",
         minHeight: "100vh",
         padding: "20px",
+        marginTop:"-40px"
       }}
     >
       <Typography

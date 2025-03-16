@@ -15,7 +15,7 @@ export default function Navbar() {
     setOpenMenu(false);
   };
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#000',marginBottom:5}}>
+    <AppBar position="sticky" sx={{ backgroundColor: '#000',marginBottom:5}}>
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={handleMenuClick}>
           <MenuIcon />
