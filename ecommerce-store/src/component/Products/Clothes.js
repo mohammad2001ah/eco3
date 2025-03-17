@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-
 const initialProducts = [
   { id: 1, title: "Black Jacket", image: "/image/black1.jpg", description: "Stylish black jacket for winter.", price: "50$" },
   { id: 2, title: "Blue T-Shirt", image: "/image/blue1.jpg", description: "Comfortable blue t-shirt.", price: "50$" },
   { id: 3, title: "Red Hoodie", image: "/image/red1.jpg", description: "Warm red hoodie for casual wear.", price: "50$" },
   { id: 4, title: "White Sneakers", image: "/image/shoes1.jpg", description: "Trendy white sneakers.", price: "50$" }
 ];
-
 export default function Clothes() {
   const [products, setProducts] = useState(initialProducts);
   const [product, setProduct] = useState({
@@ -18,12 +16,10 @@ export default function Clothes() {
     description: "",
     price: ""
   });
-
   const handelNewProduct = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
   };
-
   const handleAddProduct = (e) => {
     e.preventDefault();
     if (product.title && product.image && product.description && product.price) {
@@ -37,7 +33,6 @@ export default function Clothes() {
       alert("Please fill all fields!");
     }
   };
-
   return (
     <div className="container mt-4">
       <form onSubmit={handleAddProduct} className="mb-4 p-3 border rounded">
@@ -90,7 +85,6 @@ export default function Clothes() {
           Add Product
         </button>
       </form>
-
       <div className="row">
         {products.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
