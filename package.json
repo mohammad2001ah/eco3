@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "react-router-dom": "^7.3.0"
-  }
+  },
+  "name": "ecommerce-store",
+  "homepage": "https://mohammad2001ah.github.io/eco3",
+  "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
+  "build": "react-scripts build"}
 }
