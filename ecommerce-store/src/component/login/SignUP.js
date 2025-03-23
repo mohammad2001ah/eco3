@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const[success,setSuccess]=useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
     email: "",
     password: "",
   });
@@ -18,14 +17,25 @@ const SignUp = () => {
     e.preventDefault();
     localStorage.setItem("user", JSON.stringify(formData));
     setFormData({ firstName: "", lastName: "", email: "", password: "" });
-    navigate("/login");
+    setSuccess(true);
   };
+  useEffect(()=>{
+        if(success)
+          {
+            alert("Successful Registration")
+            const timer =setTimeout(()=>{
+            navigate("/Login");
+            },100)
+            return()=>clearTimeout(timer);
+          }
+  }
+  ,[success,navigate])
 
   return (
     <section>
       <div
         className="px-4 py-5 px-md-5 text-center text-lg-start"
-        style={{ backgroundColor: "hsl(0, 0%, 96%)" }}
+        style={{ backgroundColor: "hsl(0, 0%, 96%)" ,marginTop:"-155px"}}
       >
         <div className="container">
           <div className="row gx-lg-5 align-items-center">
@@ -39,13 +49,11 @@ const SignUp = () => {
                 accusantium odio, soluta, corrupti aliquam quibusdam tempora at cupiditate quis eum
                 maiores libero veritatis? Dicta facilis sint aliquid ipsum atque?
               </p>
-              <a href="index.html">
                 <button className="btn btn-dark">Back</button>
-              </a>
             </div>
             <div className="col-lg-6 mb-5 mb-lg-0">
-              <div className="card shadow-lg rounded">
-                <div className="card-body p-5">
+              <div className="card shadow-lg rounded-4 border-0">
+                <div className="card-body px-4" style={{marginTop:"90px"}}>
                   <form onSubmit={handleSubmit}>
                     <div className="form-group mb-4">
                       <label htmlFor="email" className="form-label">Email address</label>
@@ -73,7 +81,7 @@ const SignUp = () => {
                         style={{ fontSize: '1.1rem' }} 
                       />
                     </div>
-                    <button type="submit" className="btn btn-dark btn-lg w-100 mt-4">
+                    <button type="submit" className="btn btn-dark btn-lg w-100">
                       Sign Up
                     </button>
                   </form>
