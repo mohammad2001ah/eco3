@@ -26,6 +26,7 @@ export default function ContactUs() {
   const handelSend=(e)=>{
     e.preventDefault();
     handleOpen();
+    e.target.reset();
   }
   
   return (
@@ -87,8 +88,18 @@ export default function ContactUs() {
             <Typography id="modal-modal-description" sx={{ mt: 2,color:"#333",fontSize:"1.3rem" }}>
             Thank you for reaching out. Your message has been successfully received. We will get back to you within 24 hours, dear customer
             </Typography>
-          <Button className='ok'   onClick={handleClose}
-          style={{color:"white"}}
+          <Button className='okButton'onClick={handleClose}
+            sx={{
+              backgroundColor: '#000',
+              color: 'white',
+              padding: '10px 20px',
+              fontSize: '1rem',
+              borderRadius: '5px',
+              transition: 'background-color 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#333',
+              },
+            }}
           >OK</Button>
           </Box>
         </Modal>
