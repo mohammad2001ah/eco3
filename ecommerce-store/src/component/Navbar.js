@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, InputBase } from '@mui/material';
 import MenuIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -30,23 +31,16 @@ export default function Navbar() {
           <Link to='/Product'>
           <Button color="inherit" sx={{color:'white'}}>Product</Button>
           </Link>
-          {/* <Link to="/AboutUs">
-            <Button color="inherit"sx={{color:'white'}}>About Us</Button>
-          </Link> */}
           <Link to="/ContactUs">
             <Button color="inherit" sx={{color:'white'}}>Contact Us</Button>
           </Link>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <InputBase
-            sx={{ color: 'inherit', ml: 2 }}
-            placeholder="Search"
-            inputProps={{ 'aria-label': 'search' }}
-          />
           <IconButton sx={{ color: 'inherit' }} aria-label="search">
-            <SearchIcon />
+            <LocalShippingIcon />
           </IconButton>
+          <h5>Free shipping on orders over 50 JOD </h5>
         </Box>
       </Toolbar>
     </AppBar>
