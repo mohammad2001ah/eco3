@@ -4,9 +4,9 @@ import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const initialProducts = [
   { id: 1, title: "Black Jacket", image: "/image/black1.jpg", description: "Stylish black jacket for winter.", price: "50$" },
-  { id: 2, title: "Blue T-Shirt", image: "/image/blue1.jpg", description: "Comfortable blue t-shirt.", price: "50$" },
-  { id: 3, title: "Red Hoodie", image: "/image/red1.jpg", description: "Warm red hoodie for casual wear.", price: "50$" },
-  { id: 4, title: "White Sneakers", image: "/image/shoes1.jpg", description: "Trendy white sneakers.", price: "50$" }
+  { id: 2, title: "Blue T-Shirt", image: "/image/black1.jpg", description: "Comfortable blue t-shirt.", price: "50$" },
+  { id: 3, title: "Red Hoodie", image: "/image/black1.jpg", description: "Warm red hoodie for casual wear.", price: "50$" },
+  { id: 4, title: "White Sneakers", image: "/image/black1.jpg", description: "Trendy white sneakers.", price: "50$" }
 ];
 export default function Clothes() {
   const [products, setProducts] = useState(initialProducts);
@@ -101,6 +101,7 @@ export default function Clothes() {
             </div>
           </div>
         ))}
+          <i className="bi bi-cart-plus"></i> 
       </div>
     </div>
   );

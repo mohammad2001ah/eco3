@@ -4,10 +4,10 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function Electricals() {
   const products = [
-    { id: 1, title: "Smart Bulb", image: "/image/bulb.jpg", description: "Energy-efficient smart bulb.", price: "20$" },
-    { id: 2, title: "Smart Plug", image: "/image/plug.jpg", description: "Control your devices remotely.", price: "15$" },
-    { id: 3, title: "Smart Thermostat", image: "/image/thermostat.jpg", description: "Save energy with smart temperature control.", price: "100$" },
-    { id: 4, title: "Smart Camera", image: "/image/camera.jpg", description: "Keep your home secure.", price: "80$" }
+    { id: 1, title: "Smart Bulb", image: "/image/black1.jpg", description: "Energy-efficient smart bulb.", price: "20$" },
+    { id: 2, title: "Smart Plug", image: "/image/black1.jpg", description: "Control your devices remotely.", price: "15$" },
+    { id: 3, title: "Smart Thermostat", image: "/image/black1.jpg", description: "Save energy with smart temperature control.", price: "100$" },
+    { id: 4, title: "Smart Camera", image: "/image/black1.jpg", description: "Keep your home secure.", price: "80$" }
   ];
 
   return (
@@ -28,6 +28,7 @@ export default function Electricals() {
             </div>
           </div>
         ))}
+        <i className="bi bi-cart-plus"></i> 
       </div>
     </div>
   );

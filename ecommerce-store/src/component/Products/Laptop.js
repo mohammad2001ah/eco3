@@ -4,10 +4,10 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function Laptop() {
   const products = [
-    { id: 1, title: "MacBook Pro", image: "/image/macbook.jpg", description: "Powerful laptop for professionals.", price: "1500$" },
-    { id: 2, title: "Dell XPS", image: "/image/dell.jpg", description: "Sleek and powerful.", price: "1200$" },
-    { id: 3, title: "HP Spectre", image: "/image/hp.jpg", description: "Elegant and lightweight.", price: "1300$" },
-    { id: 4, title: "Lenovo ThinkPad", image: "/image/lenovo.jpg", description: "Durable and reliable.", price: "1100$" }
+    { id: 1, title: "MacBook Pro", image: "/image/black1.jpg", description: "Powerful laptop for professionals.", price: "1500$" },
+    { id: 2, title: "Dell XPS", image: "/image/black1.jpg", description: "Sleek and powerful.", price: "1200$" },
+    { id: 3, title: "HP Spectre", image: "/image/black1.jpg", description: "Elegant and lightweight.", price: "1300$" },
+    { id: 4, title: "Lenovo ThinkPad", image: "/image/black1.jpg", description: "Durable and reliable.", price: "1100$" }
   ];
 
   return (
@@ -28,6 +28,7 @@ export default function Laptop() {
             </div>
           </div>
         ))}
+        <i className="bi bi-cart-plus"></i> 
       </div>
     </div>
   );

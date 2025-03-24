@@ -1,18 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Watch() {
   const products = [
-    { id: 1, title: "Apple Watch Series 7", image: "/image/apple-watch.jpg", description: "Stay connected and healthy.", price: "399$" },
-    { id: 2, title: "Samsung Galaxy Watch 4", image: "/image/galaxy-watch.jpg", description: "Advanced health monitoring.", price: "349$" },
-    { id: 3, title: "Fitbit Sense", image: "/image/fitbit.jpg", description: "Track your health and fitness.", price: "299$" },
-    { id: 4, title: "Garmin Forerunner 245", image: "/image/garmin.jpg", description: "Perfect for runners.", price: "249$" }
+    { id: 1, title: "Apple Watch Series 7", image: "/image/black1.jpg", description: "Stay connected and healthy.", price: "399$" },
+    { id: 2, title: "Samsung Galaxy Watch 4", image: "/image/black1.jpg", description: "Advanced health monitoring.", price: "349$" },
+    { id: 3, title: "Fitbit Sense", image: "/image/black1.jpg", description: "Track your health and fitness.", price: "299$" },
+    { id: 4, title: "Garmin Forerunner 245", image: "/image/black1.jpg", description: "Perfect for runners.", price: "249$" }
   ];
 
   return (
     <div className="container mt-4">
       <div className="row">
+      {/* <i className="bi bi-cart-plus"></i> */}
         {products.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
             <div className="card h-100 shadow-sm">
@@ -28,6 +30,7 @@ export default function Watch() {
             </div>
           </div>
         ))}
+        <i className="bi bi-cart-plus"></i> 
       </div>
     </div>
   );
