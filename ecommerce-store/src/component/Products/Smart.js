@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { useState } from 'react';
 
 export default function Smart() {
   const products = [
@@ -9,7 +10,10 @@ export default function Smart() {
     { id: 3, title: "Google Pixel 6", image: "/image/black1.jpg", description: "Great camera and pure Android experience.", price: "799$" },
     { id: 4, title: "OnePlus 9", image: "/image/black1.jpg", description: "Fast and smooth performance.", price: "699$" }
   ];
-
+  const[countProduct,setCountProduct]=useState(0);
+  const handelAddProductToCart=()=>{
+    setCountProduct(count=>count+1);
+  }
   return (
     <div className="container mt-4">
       <div className="row">
@@ -21,14 +25,14 @@ export default function Smart() {
                 <h5 className="card-title">{product.title}</h5>
                 <h5 className="card-title">{product.price}</h5>
                 <p className="card-text">{product.description}</p>
-                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center" onClick={handelAddProductToCart}>
                   <AddShoppingCartIcon className="me-2" /> Add To Cart
                 </button>
               </div>
             </div>
           </div>
         ))}
-          <i className="bi bi-cart-plus"></i> 
+        {countProduct>0 &&(<i title='To Show Cart Should be Login First' className="bi bi-cart-plus">{countProduct}</i> )}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { useState } from 'react';
 
 export default function Laptop() {
   const products = [
@@ -9,6 +10,10 @@ export default function Laptop() {
     { id: 3, title: "HP Spectre", image: "/image/black1.jpg", description: "Elegant and lightweight.", price: "1300$" },
     { id: 4, title: "Lenovo ThinkPad", image: "/image/black1.jpg", description: "Durable and reliable.", price: "1100$" }
   ];
+  const[countProduct,setCountProduct]=useState(0);
+  const handelAddProductToCart=()=>{
+    setCountProduct(count=>count+1);
+  }
 
   return (
     <div className="container mt-4">
@@ -21,14 +26,14 @@ export default function Laptop() {
                 <h5 className="card-title">{product.title}</h5>
                 <h5 className="card-title">{product.price}</h5>
                 <p className="card-text">{product.description}</p>
-                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center" onClick={handelAddProductToCart}>
                   <AddShoppingCartIcon className="me-2" /> Add To Cart
                 </button>
               </div>
             </div>
           </div>
         ))}
-        <i className="bi bi-cart-plus"></i> 
+        {countProduct>0 &&(<i title='To Show Cart Should be Login First' className="bi bi-cart-plus">{countProduct}</i> )}
       </div>
     </div>
   );

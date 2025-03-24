@@ -227,6 +227,7 @@
   left: 2%;
   font-size: 1.3rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

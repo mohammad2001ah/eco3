@@ -33,6 +33,10 @@ export default function Clothes() {
       alert("Please fill all fields!");
     }
   };
+  const[countProduct,setCountProduct]=useState(0);
+  const handelAddProductToCart=()=>{
+    setCountProduct(count=>count+1);
+  }
   return (
     <div className="container mt-4">
       <form onSubmit={handleAddProduct} className="mb-4 p-3 border rounded">
@@ -94,15 +98,15 @@ export default function Clothes() {
                 <h5 className="card-title">{product.title}</h5>
                 <h5 className="card-title">{product.price}</h5>
                 <p className="card-text">{product.description}</p>
-                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center" onClick={handelAddProductToCart}>
                   <AddShoppingCartIcon className="me-2" /> Add To Cart
                 </button>
               </div>
             </div>
           </div>
         ))}
-          <i className="bi bi-cart-plus"></i> 
-      </div>
+        {countProduct>0 &&(<i title='To Show Cart Should be Login First' className="bi bi-cart-plus">{countProduct}</i> )}
+        </div>
     </div>
   );
 }

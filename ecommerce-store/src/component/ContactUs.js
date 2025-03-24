@@ -20,7 +20,7 @@ export default function ContactUs() {
                 <strong>Address:</strong> 123 Black Store Street, City, Country
               </p>
               <p>
-                <strong>Phone:</strong> +123 456 7890
+                <strong>Phone:</strong> 06222555
               </p>
               <p>
                 <strong>Email:</strong> info@blackstore.com
@@ -31,7 +31,7 @@ export default function ContactUs() {
             <form>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
+                <input type="text" className="form-control" id="name" placeholder="Enter your name or Email" required />
               </div>
               <div className="mb-3">
                 <label htmlFor="phone" className="form-label">Phone</label>

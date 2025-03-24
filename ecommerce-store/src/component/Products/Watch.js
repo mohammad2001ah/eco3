@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useState } from 'react';
 
 export default function Watch() {
   const products = [
@@ -10,11 +11,13 @@ export default function Watch() {
     { id: 3, title: "Fitbit Sense", image: "/image/black1.jpg", description: "Track your health and fitness.", price: "299$" },
     { id: 4, title: "Garmin Forerunner 245", image: "/image/black1.jpg", description: "Perfect for runners.", price: "249$" }
   ];
-
+  const[countProduct,setCountProduct]=useState(0);
+  const handelAddProductToCart=()=>{
+    setCountProduct(count=>count+1);
+  }
   return (
     <div className="container mt-4">
       <div className="row">
-      {/* <i className="bi bi-cart-plus"></i> */}
         {products.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
             <div className="card h-100 shadow-sm">
@@ -23,14 +26,14 @@ export default function Watch() {
                 <h5 className="card-title">{product.title}</h5>
                 <h5 className="card-title">{product.price}</h5>
                 <p className="card-text">{product.description}</p>
-                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center">
+                <button className="btn btn-dark w-100 d-flex align-items-center justify-content-center" onClick={handelAddProductToCart}>
                   <AddShoppingCartIcon className="me-2" /> Add To Cart
                 </button>
               </div>
             </div>
           </div>
         ))}
-        <i className="bi bi-cart-plus"></i> 
+        {countProduct>0 &&(<i title='To Show Cart Should be Login First' className="bi bi-cart-plus">{countProduct}</i> )}
       </div>
     </div>
   );
