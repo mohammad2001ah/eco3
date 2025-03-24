@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
+import { getCartCount,increaseCartCount } from '../../Storage';
+
 
 export default function Electricals() {
   const products = [
@@ -12,8 +14,13 @@ export default function Electricals() {
   ];
   const[countProduct,setCountProduct]=useState(0);
   const handelAddProductToCart=()=>{
+    increaseCartCount();
     setCountProduct(count=>count+1);
-  }
+  };
+  useEffect(()=>{
+      setCountProduct(getCartCount());
+    },[])
+  
 
   return (
     <div className="container mt-4">

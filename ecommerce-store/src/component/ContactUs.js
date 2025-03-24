@@ -1,8 +1,33 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ContactUs.css'; // يمكنك إنشاء ملف CSS خاص بصفحة Contact Us
+import './ContactUs.css';
+import Modal from '@mui/material/Modal';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
 
 export default function ContactUs() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#fff', 
+    borderRadius: '12px', 
+    boxShadow: '0 8px 16px rgba(0,0,0,0.2)', 
+    p: 4,
+    textAlign: 'center',
+  };
+  const handelSend=(e)=>{
+    e.preventDefault();
+    handleOpen();
+  }
+  
   return (
     <div className="contact-us-container">
       <div className="container">
@@ -28,7 +53,7 @@ export default function ContactUs() {
             </div>
           </div>
           <div className="col-md-6">
-            <form>
+            <form onSubmit={handelSend}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
                 <input type="text" className="form-control" id="name" placeholder="Enter your name or Email" required />
@@ -49,8 +74,25 @@ export default function ContactUs() {
                 <label htmlFor="message" className="form-label">Message</label>
                 <textarea className="form-control" id="message" rows="5" placeholder="Enter your message" required />
               </div>
-              <button type="submit" className="btn btn-dark">Send Message</button>
+              <button  type="submit" className="btn btn-dark">Send Message</button>
             </form>
+            <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-description" sx={{ mt: 2,color:"#333",fontSize:"1.3rem" }}>
+            Thank you for reaching out. Your message has been successfully received. We will get back to you within 24 hours, dear customer
+            </Typography>
+          <Button className='ok'   onClick={handleClose}
+          style={{color:"white"}}
+          >OK</Button>
+          </Box>
+        </Modal>
+    </div>
           </div>
         </div>
       </div>

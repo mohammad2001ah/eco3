@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { useState } from 'react';
-
+import { useState,useEffect } from 'react';
+import { getCartCount,increaseCartCount } from '../../Storage';
 export default function Watch() {
   const products = [
     { id: 1, title: "Apple Watch Series 7", image: "/image/black1.jpg", description: "Stay connected and healthy.", price: "399$" },
@@ -13,8 +13,12 @@ export default function Watch() {
   ];
   const[countProduct,setCountProduct]=useState(0);
   const handelAddProductToCart=()=>{
+    increaseCartCount();
     setCountProduct(count=>count+1);
   }
+  useEffect(()=>{
+    setCountProduct(getCartCount());
+  },[])
   return (
     <div className="container mt-4">
       <div className="row">

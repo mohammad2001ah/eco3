@@ -43,35 +43,6 @@ export default function Home() {
 
           <button 
             className="product"
-            onClick={() => navigate("/Product")}
-            style={{
-              padding: "12px 30px",
-              cursor: "pointer",
-              color: "black",
-              backgroundColor: "white",
-              borderRadius: "50px",
-              fontSize: "1.3rem",
-              outline: "none",
-              border: "2px solid white",
-              transition: "all 0.3s ease",
-              fontWeight: "bold",
-              boxShadow: "0px 4px 10px rgba(255,255,255,0.2)"
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = "black";
-              e.target.style.color = "white";
-              e.target.style.border = "2px solid white";
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = "white";
-              e.target.style.color = "black";
-              e.target.style.border = "2px solid white";
-            }}
-          >
-            Shop Now
-          </button> 
-          <button 
-            className="product"
             onClick={() => navigate("/Login")}
             style={{
               padding: "12px 30px",

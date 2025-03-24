@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./smart.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { getCartCount,increaseCartCount } from '../../Storage';
+
 const initialProducts = [
   { id: 1, title: "Black Jacket", image: "/image/black1.jpg", description: "Stylish black jacket for winter.", price: "50$" },
   { id: 2, title: "Blue T-Shirt", image: "/image/black1.jpg", description: "Comfortable blue t-shirt.", price: "50$" },
@@ -35,8 +37,12 @@ export default function Clothes() {
   };
   const[countProduct,setCountProduct]=useState(0);
   const handelAddProductToCart=()=>{
+    increaseCartCount();
     setCountProduct(count=>count+1);
-  }
+  };
+   useEffect(()=>{
+      setCountProduct(getCartCount());
+    },[])
   return (
     <div className="container mt-4">
       <form onSubmit={handleAddProduct} className="mb-4 p-3 border rounded">
