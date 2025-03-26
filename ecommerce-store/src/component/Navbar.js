@@ -55,7 +55,7 @@ const Navbar = () => {
               <LocalShippingIcon />
             </IconButton>
             <Typography variant="body2" color="white" sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}>
-              Free shipping on orders over 50 JOD
+              Free shipping on orders over 50$
             </Typography>
           </Box>
         </Toolbar>

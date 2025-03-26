@@ -6,10 +6,10 @@ import { useState,useEffect } from 'react';
 import { getCartCount,increaseCartCount } from '../../Storage';
 export default function Watch() {
   const products = [
-    { id: 1, title: "Apple Watch Series 7", image: "/image/black1.jpg", description: "Stay connected and healthy.", price: "399$" },
-    { id: 2, title: "Samsung Galaxy Watch 4", image: "/image/black1.jpg", description: "Advanced health monitoring.", price: "349$" },
-    { id: 3, title: "Fitbit Sense", image: "/image/black1.jpg", description: "Track your health and fitness.", price: "299$" },
-    { id: 4, title: "Garmin Forerunner 245", image: "/image/black1.jpg", description: "Perfect for runners.", price: "249$" }
+    { id: 1, title: "Apple Watch Series 7", image: "/image/Apple Watch Series 7.webp", description: "Stay connected and healthy.", price: "399$" },
+    { id: 2, title: "Samsung Galaxy Watch 4", image: "/image/Samsung Galaxy Watch.webp", description: "Advanced health monitoring.", price: "349$" },
+    { id: 3, title: "Fitbit Sense", image: "/image/Fitbit Sense.webp", description: "Track your health and fitness.", price: "299$" },
+    { id: 4, title: "Garmin Forerunner 245", image: "/image/Garmin Forerunner 245.webp", description: "Perfect for runners.", price: "249$" }
   ];
   const[countProduct,setCountProduct]=useState(0);
   const handelAddProductToCart=()=>{

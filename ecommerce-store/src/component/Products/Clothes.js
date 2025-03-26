@@ -5,10 +5,10 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { getCartCount,increaseCartCount } from '../../Storage';
 
 const initialProducts = [
-  { id: 1, title: "Black Jacket", image: "/image/black1.jpg", description: "Stylish black jacket for winter.", price: "50$" },
-  { id: 2, title: "Blue T-Shirt", image: "/image/black1.jpg", description: "Comfortable blue t-shirt.", price: "50$" },
-  { id: 3, title: "Red Hoodie", image: "/image/black1.jpg", description: "Warm red hoodie for casual wear.", price: "50$" },
-  { id: 4, title: "White Sneakers", image: "/image/black1.jpg", description: "Trendy white sneakers.", price: "50$" }
+  { id: 1, title: "Black Jacket", image: "/image/Black Jacket.jpeg", description: "Stylish black jacket for winter.", price: "50$" },
+  { id: 2, title: "Blue T-Shirt", image: "/image/black-tshirt.webp", description: "Comfortable blue t-shirt.", price: "50$" },
+  { id: 3, title: "Red Hoodie", image: "/image/Red.webp", description: "Warm red hoodie for casual wear.", price: "50$" },
+  { id: 4, title: "White Sneakers", image: "/image/White Sneakers.webp", description: "Trendy white sneakers.", price: "50$" }
 ];
 export default function Clothes() {
   const [products, setProducts] = useState(initialProducts);
@@ -99,7 +99,7 @@ export default function Clothes() {
         {products.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
             <div className="card h-100 shadow-sm">
-              <img className="card-img-top" src={product.image} alt={product.title} />
+              <img className="card-img-top" style={{width:"100%"}} src={product.image} alt={product.title} />
               <div className="card-body">
                 <h5 className="card-title">{product.title}</h5>
                 <h5 className="card-title">{product.price}</h5>
