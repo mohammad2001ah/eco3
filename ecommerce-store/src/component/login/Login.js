@@ -59,7 +59,7 @@ export default function Login() {
                 name='loginEmail'
                 value={loginData.loginEmail}
                 className="form-control"
-                placeholder="Enter your username"
+                placeholder="Enter your Email"
                 onChange={handleChange}
                 style={{ borderRadius: '5px', border: '1px solid #ced4da' }}
               />
@@ -89,7 +89,7 @@ export default function Login() {
               className="btn btn-dark w-100 mb-3"
               type="submit"
               style={{ borderRadius: '5px', fontSize: '1rem', fontWeight: '500' }}
-              onClick={{handleLogin}}
+              onClick={(e)=>handleLogin}
             >
               Login
             </button>

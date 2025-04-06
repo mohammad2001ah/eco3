@@ -11,6 +11,7 @@ import Clothes from "./component/Products/Clothes";
 import Watch from "./component/Products/Watch";
 import AboutUs from "./component/AboutUs";
 import ContactUs from "./component/ContactUs";
+import Footer from "./component/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs/>}/>
         <Route path="/ContactUs" element={<ContactUs/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
