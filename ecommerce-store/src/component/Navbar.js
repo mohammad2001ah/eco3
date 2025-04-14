@@ -27,7 +27,6 @@ const Navbar = () => {
           <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, display: { sm: 'none' } }} onClick={handleMenuClick}>
             <MenuIcon />
           </IconButton>
-
           
           <Typography variant="h6" sx={{ flexGrow: 1}}>
             <Link to={"/"} style={{textDecoration:"none",color:"white"}}>
@@ -63,16 +62,36 @@ const Navbar = () => {
 
       
       <Drawer anchor="left" open={mobileOpen} onClose={handleMenuClick}>
-        <Box sx={{ width: 250 }} onClick={handleMenuClick}>
-          <List>
-            {navItems.map((item) => (
-              <ListItem button key={item.label} component={Link} to={item.path}>
-                <ListItemText primary={item.label} />
-              </ListItem>
-            ))}
-          </List>
-        </Box>
-      </Drawer>
+  <Box
+    sx={{
+      width: 250,
+      backgroundColor: 'black',
+      color: 'white',
+      height: '100%',
+    }}
+    onClick={handleMenuClick}
+  >
+    <List>
+      {navItems.map((item) => (
+        <ListItem
+          button
+          key={item.label}
+          component={Link}
+          to={item.path}
+          sx={{
+            color:"white",
+            '&:hover': {
+              backgroundColor: '#222',
+            },
+          }}
+        >
+          <ListItemText primary={item.label} />
+        </ListItem>
+      ))}
+    </List>
+  </Box>
+</Drawer>
+
     </>
   );
 };

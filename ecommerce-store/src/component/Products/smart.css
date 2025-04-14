@@ -88,7 +88,7 @@
   margin-right: 8px;
   font-size: 1.2rem;
 }
-.bi{
+.bi {
   height: 50px;
   width: 50px;
   background-color: #000000;
@@ -97,11 +97,31 @@
   justify-content: center;
   align-items: center;
   color: white;
-  position: absolute;
-  left: 2%;
+  position: fixed;
+  bottom: 48px;
+  right: 20px;
   font-size: 1.3rem;
   font-weight: 700;
   cursor: pointer;
+  z-index: 9999;
+}
+
+@media (max-width: 576px) {
+  .bi {
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (min-width: 577px) {
+  .bi {
+    height: 50px;
+    width: 50px;
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
