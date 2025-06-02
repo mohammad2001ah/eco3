@@ -13,6 +13,11 @@ export default function Smart() {
   ];
   const[countProduct,setCountProduct]=useState(0);
   const handelAddProductToCart=()=>{
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      alert("Please login first to add products to cart.");
+      return;
+    }
     increaseCartCount();
     setCountProduct(count=>count+1);
   };
