@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: '#000', marginBottom: 5 }}>
+      <AppBar position="sticky" sx={{ backgroundColor: '#000' }}>
         <Toolbar>
           
           <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, display: { sm: 'none' } }} onClick={handleMenuClick}>
