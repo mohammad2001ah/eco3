@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './AboutUs.css'; // يمكنك إنشاء ملف CSS خاص بصفحة About Us
+import './AboutUs.css'; 
 
 export default function AboutUs() {
   return (
